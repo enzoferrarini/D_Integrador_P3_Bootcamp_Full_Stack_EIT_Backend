@@ -16,11 +16,15 @@ const appServer = async () => {
   await dbConection();
   // Habilitar CORS
   const corsOptions = {
-    origin: "*",
-    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+    origin: process.env.CLIENT_ORIGIN || "*", // Permitir solo tu dominio de Vercel
+    methods: ["GET", "HEAD", "PUT", "PATCH", "POST", "DELETE", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization"],
     credentials: true,
   };
   app.use(cors(corsOptions));
+
+  // Middleware para manejar solicitudes preflight (OPTIONS)
+  app.options('*', cors(corsOptions));
 
   app.use(express.json());
   app.use("/public", express.static(`./temp/imgs`));
