@@ -8,7 +8,7 @@ export const productValidationRules = [
     .withMessage("Campo Obligatorio")
     .isLength({ min: 2, max: 30 })
     .withMessage("Mínimo 2 caracteres y Máximo 30")
-    .matches(/^[a-zA-ZñÑ ]+$/)
+    .matches(/^[0-9a-zA-ZñÑ ]+$/)
     .withMessage("Solo se permiten caracteres alfabéticos")
     .escape(), // Escapa caracteres peligrosos
   body("price")
