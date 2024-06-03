@@ -6,8 +6,8 @@ export const productValidationRules = [
     .trim()
     .notEmpty()
     .withMessage("Campo Obligatorio")
-    .isLength({ min: 2, max: 20 })
-    .withMessage("Mínimo 2 caracteres y Máximo 20")
+    .isLength({ min: 2, max: 30 })
+    .withMessage("Mínimo 2 caracteres y Máximo 30")
     .matches(/^[a-zA-ZñÑ ]+$/)
     .withMessage("Solo se permiten caracteres alfabéticos")
     .escape(), // Escapa caracteres peligrosos
@@ -50,8 +50,8 @@ export const productValidationRules = [
     .trim()
     .notEmpty()
     .withMessage("Campo Obligatorio")
-    .isLength({ min: 2, max: 30 })
-    .withMessage("Mínimo 2 caracteres y Máximo 30"),
+    .isLength({ min: 2, max: 35 })
+    .withMessage("Mínimo 2 caracteres y Máximo 35"),
   body("ageFrom")
     .trim()
     .notEmpty()
