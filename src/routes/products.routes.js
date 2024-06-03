@@ -25,9 +25,3 @@ route.delete("/:id", deleteProduct);
 //PUT Actualizar un producto por Id -editProduct-
 route.put("/:id", upload.single("image"), productValidationRules, editProduct);
 export default route;
-
-// route.post("/", upload.single("image"), createProduct);
-// route.get("/", getProduct);
-// route.get("/:id", getProductId)
-// route.delete("/:id", deleteProduct)
-// route.put("/:id", upload.single("image"), editProduct)
