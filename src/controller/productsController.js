@@ -57,7 +57,8 @@ export const createProduct = async (req, res) => {
     console.log("Ha habido un error al crear el producto.", error);
     res.status(500).json({
       ok: false,
-      msg: "Ha habido un error con el servidor",
+      msg: "Ha habido un error con el servidor!",
+      env:process.env.BASE_URL
     });
   }
 };
