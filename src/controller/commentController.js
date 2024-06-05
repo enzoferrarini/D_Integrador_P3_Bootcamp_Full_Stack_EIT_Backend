@@ -24,8 +24,7 @@ export const createComment = async (req, res) => {
 };
 
 export const getComment = async (req, res) => {
-  const { search } = req.query;
-
+  
   try {
     const comments = await Comment.find();
     res.json({
