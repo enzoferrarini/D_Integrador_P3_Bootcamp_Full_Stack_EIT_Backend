@@ -23,9 +23,11 @@ npm install
 -Crear en la raíz del proyecto un archivo de variables de entorno (.env) que deberá contener las siguientes variables:
 
 Variable: `BASE_URL`
-Descripción: Conexión a el dominio previsto por la plataforma en la que se deployó el proyecto (ej. Render)
 |--------------------------------|
+Descripción: Conexión a el dominio previsto por la plataforma en la que se deployó el proyecto (ej. Render)
+
 Variable: `DB_URL_CONNECTION`
+|--------------------------------|
 Descripción: Conexión a la Base de Datos (ej. MongoDB)
 
 ## Ejecutar server
